@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "UgNhUyl4Y0l5NkeUNOgKi4miamwz2EujQCOF9S4XKCs=",
+  "Source": "DiceRollBackend.API",
+  "BasePath": "_content/DiceRollBackend.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
