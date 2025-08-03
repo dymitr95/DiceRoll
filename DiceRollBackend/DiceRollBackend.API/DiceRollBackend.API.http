@@ -1,6 +1,6 @@
-@DiceRollBackend.API_HostAddress = http://localhost:5252
+@DiceRollBackend.API_HostAddress = http://localhost:4000
 
-GET {{DiceRollBackend.API_HostAddress}}/weatherforecast/
-Accept: application/json
+#GET {{DiceRollBackend.API_HostAddress}}/weatherforecast/
+#Accept: application/json
 
 ###

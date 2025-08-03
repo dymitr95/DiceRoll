@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceRollBackend.API", "DiceRollBackend.API\DiceRollBackend.API.csproj", "{549CC2D3-4DE6-45CE-A186-ED1C556781FF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceRollBackend.Application", "DiceRollBackend.Application\DiceRollBackend.Application.csproj", "{AC6C142E-1285-44D5-9CC1-814BEDDAA4C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceRollBackend.Domain", "DiceRollBackend.Domain\DiceRollBackend.Domain.csproj", "{46FE5BA0-867C-4BE5-BBA3-2AC72F1C3E1D}"
@@ -10,16 +8,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceRollBackend.Persistence
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceRollBackend.Tests", "DiceRollBackend.Tests\DiceRollBackend.Tests.csproj", "{4CFFF0F4-150B-47F3-A07A-D93E785AB421}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceRollBackend.API", "DiceRollBackend.API\DiceRollBackend.API.csproj", "{2E9B77D3-827A-4640-8086-A5FF830ADE13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{549CC2D3-4DE6-45CE-A186-ED1C556781FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{549CC2D3-4DE6-45CE-A186-ED1C556781FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{549CC2D3-4DE6-45CE-A186-ED1C556781FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{549CC2D3-4DE6-45CE-A186-ED1C556781FF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AC6C142E-1285-44D5-9CC1-814BEDDAA4C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AC6C142E-1285-44D5-9CC1-814BEDDAA4C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC6C142E-1285-44D5-9CC1-814BEDDAA4C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -36,5 +32,9 @@ Global
 		{4CFFF0F4-150B-47F3-A07A-D93E785AB421}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CFFF0F4-150B-47F3-A07A-D93E785AB421}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CFFF0F4-150B-47F3-A07A-D93E785AB421}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E9B77D3-827A-4640-8086-A5FF830ADE13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E9B77D3-827A-4640-8086-A5FF830ADE13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E9B77D3-827A-4640-8086-A5FF830ADE13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E9B77D3-827A-4640-8086-A5FF830ADE13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
