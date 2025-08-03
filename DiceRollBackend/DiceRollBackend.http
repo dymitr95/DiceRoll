@@ -1,0 +1,6 @@
+@DiceRollBackend_HostAddress = http://localhost:5049
+
+GET {{DiceRollBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
