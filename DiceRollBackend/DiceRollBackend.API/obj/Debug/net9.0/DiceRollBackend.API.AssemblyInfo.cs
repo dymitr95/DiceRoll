@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DiceRollBackend.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd38a73b2ff73e66fcdc34d8f7f63bc108f72c59")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5de735f1d376f273acf16f76451314ba6150f407")]
 [assembly: System.Reflection.AssemblyProductAttribute("DiceRollBackend.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DiceRollBackend.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
