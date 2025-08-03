@@ -1,4 +1,6 @@
+using DiceRollBackend.Application.Interfaces;
 using DiceRollBackend.Persistence.Configuration;
+using DiceRollBackend.Persistence.UnitOfWork;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,8 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 builder.Services.AddPersistence(builder.Configuration);
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 
