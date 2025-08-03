@@ -9,7 +9,7 @@ public class RoomRepository<T>(AppDbContext context) : Repository<Room>(context)
 {
     private readonly AppDbContext _context = context;
 
-    public async Task<Room?> GetRoomByCode(string code)
+    public async Task<Room?> GetRoomByCodeAsync(string code)
     {
         return await _context.Rooms.FirstOrDefaultAsync(r => r.Code == code);
     }
