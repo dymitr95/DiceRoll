@@ -297,10 +297,21 @@
           }
         }
       },
+      "DiceRollBackend.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/DiceRollBackend.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DiceRollBackend.Domain.dll": {}
+        }
+      },
       "DiceRollBackend.Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "DiceRollBackend.Domain": "1.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4"
         },
         "compile": {
@@ -753,6 +764,11 @@
         "npgsql.entityframeworkcore.postgresql.nuspec",
         "postgresql.png"
       ]
+    },
+    "DiceRollBackend.Domain/1.0.0": {
+      "type": "project",
+      "path": "../DiceRollBackend.Domain/DiceRollBackend.Domain.csproj",
+      "msbuildProject": "../DiceRollBackend.Domain/DiceRollBackend.Domain.csproj"
     },
     "DiceRollBackend.Persistence/1.0.0": {
       "type": "project",
