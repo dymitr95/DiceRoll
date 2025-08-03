@@ -1,6 +1,18 @@
-﻿namespace DiceRollBackend.Persistence.Configuration;
+﻿using DiceRollBackend.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-public class RoomConfiguration
+namespace DiceRollBackend.Persistence.Configuration;
+
+public class RoomConfiguration : IEntityTypeConfiguration<Room>
 {
-    
+    public void Configure(EntityTypeBuilder<Room> builder)
+    {
+        builder.ToTable("Rooms");
+        builder.HasKey(r => r.Id);
+
+        builder.Property(r => r.Code)
+            .IsRequired()
+            .HasMaxLength(8);
+    }
 }
