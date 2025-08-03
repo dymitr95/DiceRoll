@@ -1,4 +1,5 @@
 ﻿using DiceRollBackend.Application.Interfaces;
+using DiceRollBackend.Application.Interfaces.Repositories;
 using DiceRollBackend.Persistence.DbContexts;
 using Microsoft.EntityFrameworkCore;
 

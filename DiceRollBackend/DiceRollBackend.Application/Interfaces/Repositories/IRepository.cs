@@ -1,4 +1,4 @@
-﻿namespace DiceRollBackend.Application.Interfaces;
+﻿namespace DiceRollBackend.Application.Interfaces.Repositories;
 
 public interface IRepository<T> where T : class
 {
