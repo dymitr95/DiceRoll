@@ -1,11 +1,14 @@
 using DiceRollBackend.Application.Interfaces;
 using DiceRollBackend.Application.Interfaces.Repositories;
 using DiceRollBackend.Application.Interfaces.Services;
+using DiceRollBackend.Application.Mappings;
 using DiceRollBackend.Application.Services;
 using DiceRollBackend.Domain.Entities;
+using DiceRollBackend.Domain.Interfaces.Common;
 using DiceRollBackend.Persistence.Configuration;
 using DiceRollBackend.Persistence.Repositories;
 using DiceRollBackend.Persistence.UnitOfWork;
+using DiceRollBackend.Persistence.Utils.Common;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,8 +29,19 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 //Repositories
 builder.Services.AddScoped<IRoomRepository<Room>, RoomRepository<Room>>();
 
-//Services
+//Application services
 builder.Services.AddScoped<IRoomService, RoomService>();
+
+
+//Common services
+builder.Services.AddScoped<IRoomCodeGenerator, RoomCodeGenerator>();
+
+//Mappings
+builder.Services.AddAutoMapper(cfg =>
+{
+    cfg.AllowNullCollections = true;
+    cfg.AllowNullDestinationValues = true;
+}, AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
