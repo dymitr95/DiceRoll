@@ -1,4 +1,4 @@
-﻿namespace DiceRollBackend.Application.DTOs;
+﻿namespace DiceRollBackend.Application.DTOs.Room;
 
 public class RoomDto
 {

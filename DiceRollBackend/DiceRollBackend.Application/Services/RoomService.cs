@@ -1,4 +1,4 @@
-﻿using DiceRollBackend.Application.DTOs;
+﻿using DiceRollBackend.Application.DTOs.Room;
 using DiceRollBackend.Application.Interfaces;
 using DiceRollBackend.Application.Interfaces.Services;
 
