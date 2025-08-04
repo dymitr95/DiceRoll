@@ -28,6 +28,7 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 //Repositories
 builder.Services.AddScoped<IRoomRepository<Room>, RoomRepository<Room>>();
+builder.Services.AddScoped<IUserRepository<User>, UserRepository<User>>();
 
 //Application services
 builder.Services.AddScoped<IRoomService, RoomService>();

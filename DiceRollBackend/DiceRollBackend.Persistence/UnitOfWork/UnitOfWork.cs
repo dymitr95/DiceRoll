@@ -9,6 +9,7 @@ namespace DiceRollBackend.Persistence.UnitOfWork;
 public class UnitOfWork(AppDbContext context) : IUnitOfWork
 {
     public IRoomRepository<Room> Rooms { get; } = new RoomRepository<Room>(context);
+    public IUserRepository<User> Users { get; } = new UserRepository<User>(context);
 
     
     public async Task<int> SaveChangesAsync()
