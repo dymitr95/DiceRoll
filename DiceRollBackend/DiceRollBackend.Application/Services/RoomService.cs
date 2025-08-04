@@ -19,13 +19,12 @@ public class RoomService(IUnitOfWork unitOfWork, IRoomCodeGenerator roomCodeGene
     public async Task<RoomDto> CreateRoomAsync()
     {
         var roomCode = roomCodeGenerator.GenerateRoomCode();
-        var room = new Room()
-        {
-            Id = Guid.NewGuid(),
-            Code = roomCode
-        };
+        
+        var room = Room.Create(roomCode);
+        
         await unitOfWork.Rooms.AddAsync(room);
         await unitOfWork.SaveChangesAsync();
+        
         return mapper.Map<RoomDto>(room);
     }
 

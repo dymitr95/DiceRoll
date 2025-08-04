@@ -32,7 +32,7 @@ builder.Services.AddScoped<IUserRepository<User>, UserRepository<User>>();
 
 //Application services
 builder.Services.AddScoped<IRoomService, RoomService>();
-
+builder.Services.AddScoped<IUserService, UserService>();
 
 //Common services
 builder.Services.AddScoped<IRoomCodeGenerator, RoomCodeGenerator>();
