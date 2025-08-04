@@ -5,6 +5,9 @@ public class User
     public Guid Id { get; set; }
     public string Name { get; set; } = null!;
     
+    public Guid? RoomId { get; private set; }
+    public Room? Room { get; private set; }
+    
     private User(){}
 
     private User(string name)
