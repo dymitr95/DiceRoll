@@ -11,6 +11,8 @@ public class RoomRepository<T>(AppDbContext context) : Repository<Room>(context)
 
     public async Task<Room?> GetRoomByCodeAsync(string code)
     {
-        return await _context.Rooms.FirstOrDefaultAsync(r => r.Code == code);
+        return await _context.Rooms.Include(r => r.Users)
+            .Include(r => r.ActiveUser)
+            .FirstOrDefaultAsync(r => r.Code == code);
     }
 }

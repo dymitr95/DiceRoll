@@ -28,6 +28,23 @@ public class RoomService(IUnitOfWork unitOfWork, IRoomCodeGenerator roomCodeGene
         return mapper.Map<RoomDto>(room);
     }
 
+    public async Task<RoomDto> CreateRoomWithUserAsync(string userName)
+    {
+        var roomCode = roomCodeGenerator.GenerateRoomCode();
+        
+        var room = Room.Create(roomCode);
+        var user = User.Create(userName);
+        
+        room.AddUser(user);
+        await unitOfWork.Rooms.AddAsync(room);
+        await unitOfWork.SaveChangesAsync();
+        
+        room.SetActiveUser(user);
+        await unitOfWork.SaveChangesAsync();
+        
+        return mapper.Map<RoomDto>(room);
+    }
+
     public async Task<IReadOnlyList<RoomDto>> GetAllRoomsAsync()
     {
         var rooms = await unitOfWork.Rooms.ListAsync();

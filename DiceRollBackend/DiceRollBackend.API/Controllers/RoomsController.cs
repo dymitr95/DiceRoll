@@ -30,9 +30,9 @@ public class RoomsController(IRoomService roomService) : ControllerBase
     }
     
     [HttpPost("create")]
-    public async Task<IActionResult> CreateRoom()
+    public async Task<IActionResult> CreateRoom([FromBody] CreateRoomWithUserRequest request)
     {
-        var room = await roomService.CreateRoomAsync();
+        var room = await roomService.CreateRoomWithUserAsync(request.UserName);
         return Ok(ApiResponse<RoomDto>.Success(room));
     }
 }
